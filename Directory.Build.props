@@ -2,7 +2,7 @@
 
   <!-- Fallback values for the MSBuild properties the generated project file reads.
 
-       Ondewo.SURVEY.Client.csproj deliberately carries no literal version - it reads
+       Ondewo.Survey.Client.csproj deliberately carries no literal version - it reads
        $(OndewoTargetFramework), $(GoogleProtobufVersion), $(GrpcDotnetVersion) and
        $(GoogleApiCommonProtosVersion). Inside the compiler image those come from its Dockerfile
        ARG lines; the Makefile reads them back out of that same pinned Dockerfile and exports
@@ -16,7 +16,7 @@
 
        When the compiler bumps a pin, update it here too; check_dotnet_properties tells you so. -->
   <PropertyGroup>
-    <OndewoPackageId Condition="'$(OndewoPackageId)' == ''">Ondewo.SURVEY.Client</OndewoPackageId>
+    <OndewoPackageId Condition="'$(OndewoPackageId)' == ''">Ondewo.Survey.Client</OndewoPackageId>
     <OndewoTargetFramework Condition="'$(OndewoTargetFramework)' == ''">netstandard2.0</OndewoTargetFramework>
     <GoogleProtobufVersion Condition="'$(GoogleProtobufVersion)' == ''">3.32.0</GoogleProtobufVersion>
     <GrpcDotnetVersion Condition="'$(GrpcDotnetVersion)' == ''">2.83.0</GrpcDotnetVersion>

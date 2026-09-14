@@ -6,7 +6,7 @@
 
 ### New Features
 
-* Initial release of the ONDEWO SURVEY C# client. The package `Ondewo.SURVEY.Client` ships the
+* Initial release of the ONDEWO SURVEY C# client. The package `Ondewo.Survey.Client` ships the
   gRPC message and client stubs generated from the [ONDEWO SURVEY API](https://github.com/ondewo/ondewo-survey-api)
   by the `ondewo-csharp-proto-compiler` image of
   [ondewo-proto-compiler 5.15.0](https://github.com/ondewo/ondewo-proto-compiler): one
@@ -20,7 +20,7 @@
   generation and `dotnet pack` — and `make ondewo_release` cuts the GitHub and NuGet release from the same
   version number.
 * The generated stubs are **committed** under `api/`, like every other ONDEWO client SDK, together with the
-  generated `Ondewo.SURVEY.Client.csproj` and a `Directory.Build.props` carrying a fallback for every MSBuild pin
+  generated `Ondewo.Survey.Client.csproj` and a `Directory.Build.props` carrying a fallback for every MSBuild pin
   that project file reads — which is what lets a clone without the `ondewo-proto-compiler` submodule build.
   `make check_dotnet_properties` fails the build if the two ever disagree.
 * `auth/OndewoAuth.cs` is the hand-written bearer-token surface of the package: call metadata, an auth
@@ -35,6 +35,6 @@
   `FHIR.FHIRClient`.
 * `.github/workflows/ci.yml` builds, tests and packs the committed stubs on `ubuntu-latest` without the
   submodules and without the compiler image. Nothing in it is guarded by a directory check that could turn an
-  empty repository into a green run: a missing `Ondewo.SURVEY.Client.csproj` or an empty `api/` fails the job.
+  empty repository into a green run: a missing `Ondewo.Survey.Client.csproj` or an empty `api/` fails the job.
 
 *****************

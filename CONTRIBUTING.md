@@ -7,13 +7,13 @@ hurdles.
 
 Please fill out either the individual or corporate Contributor License Agreement (CLA).
 
-If you are an individual writing original source code and you're sure you own the intellectual property, then
-you'll need to sign an [individual CLA](TODO:).
-If you work for a company that wants to allow you to contribute your work, then you'll need to sign a
-[corporate CLA](TODO:).
+- If you are an individual writing original source code and you're sure you own the intellectual property,
+  then you'll need to sign an individual CLA.
+- If you work for a company that wants to allow you to contribute your work, then you'll need to sign a
+  corporate CLA.
 
-Follow either of the two links above to access the appropriate CLA and instructions for how to sign and return
-it. Once we receive it, we'll be able to accept your pull requests.
+Contact <office@ondewo.com> to receive the appropriate CLA and instructions for how to sign and return it.
+Once we receive it, we'll be able to accept your pull requests.
 
 ## Contributing a patch
 
@@ -30,7 +30,7 @@ it. Once we receive it, we'll be able to accept your pull requests.
 
 ## What is generated and what is not
 
-Almost everything in this repository is generated. `api/` and `Ondewo.SURVEY.Client.csproj` are the
+Almost everything in this repository is generated. `api/` and `Ondewo.Survey.Client.csproj` are the
 output of the `ondewo-csharp-proto-compiler` docker image running over the `ondewo-survey-api` submodule, and they are
 overwritten in full by `make build`.
 

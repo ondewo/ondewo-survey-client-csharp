@@ -23,7 +23,7 @@
 
 ## Overview
 
-`Ondewo.SURVEY.Client` is a compiled version of the
+`Ondewo.Survey.Client` is a compiled version of the
 [ONDEWO SURVEY API](https://github.com/ondewo/ondewo-survey-api) — the gRPC interface to ONDEWO
 Survey — generated with the
 [ONDEWO PROTO COMPILER](https://github.com/ondewo/ondewo-proto-compiler).
@@ -37,35 +37,35 @@ over the `ondewo-survey-api` submodule, and it is regenerated in full by `make b
 
 ## Installation
 
-The package is published to [nuget.org](https://www.nuget.org/packages/Ondewo.SURVEY.Client) as
-**`Ondewo.SURVEY.Client`**. No custom feed, credential or `nuget.config` entry is needed — the default
+The package is published to [nuget.org](https://www.nuget.org/packages/Ondewo.Survey.Client) as
+**`Ondewo.Survey.Client`**. No custom feed, credential or `nuget.config` entry is needed — the default
 `nuget.org` source is enough.
 
 With the .NET CLI, from the directory of the project that should consume it:
 
 ```shell
-dotnet add package Ondewo.SURVEY.Client
+dotnet add package Ondewo.Survey.Client
 ```
 
 That resolves the latest stable version. To pin one — which is what you want in a service, because
 the client version tracks the ONDEWO SURVEY API in major and minor:
 
 ```shell
-dotnet add package Ondewo.SURVEY.Client --version 2.0.0
+dotnet add package Ondewo.Survey.Client --version 2.0.0
 ```
 
 Or write the `PackageReference` item into your `.csproj` directly:
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="Ondewo.SURVEY.Client" Version="2.0.0" />
+  <PackageReference Include="Ondewo.Survey.Client" Version="2.0.0" />
 </ItemGroup>
 ```
 
 In the Visual Studio Package Manager Console:
 
 ```powershell
-Install-Package Ondewo.SURVEY.Client -Version 2.0.0
+Install-Package Ondewo.Survey.Client -Version 2.0.0
 ```
 
 A few things worth knowing before you take the dependency:
@@ -86,7 +86,7 @@ A few things worth knowing before you take the dependency:
 - **Debugging.** Every release also publishes a `.snupkg` symbol package to the nuget.org symbol
   server, so stepping into the generated stubs works once `https://symbols.nuget.org/download/symbols`
   is enabled in your debugger's symbol settings.
-- **Versioning.** `Ondewo.SURVEY.Client` **2.0.x** is generated from ONDEWO SURVEY API **2.0.0**: major
+- **Versioning.** `Ondewo.Survey.Client` **2.0.x** is generated from ONDEWO SURVEY API **2.0.0**: major
   and minor always match the API, the patch number is this client's own.
 
 From source:
@@ -148,7 +148,7 @@ var response = await client.SomeRpcAsync(new SomeRequest());
 ├── nupkg                                    <----- the packed .nupkg / .snupkg (not tracked)
 ├── ondewo-survey-api                               <----- submodule: the .proto sources
 ├── ondewo-proto-compiler                    <----- submodule: the code generator
-├── Ondewo.SURVEY.Client.csproj     <----- generated project file (tracked)
+├── Ondewo.Survey.Client.csproj     <----- generated project file (tracked)
 ├── Directory.Build.props                    <----- fallback MSBuild pins for a submodule-free build
 ├── Makefile                                 <----- every documented entry point, see `make help`
 ├── README.md
@@ -179,7 +179,7 @@ Two details are worth knowing:
 - The image runs as **root** (it writes into a root-owned directory inside the container), so the files it copies
   out are owned by root. `generate_ondewo_protos` calls `fix_generated_file_ownership` right afterwards, which
   `sudo chown`s exactly the four paths the image owns — you will be prompted for your password.
-- The generated `Ondewo.SURVEY.Client.csproj` is **tracked**. On the next run the image finds it in the
+- The generated `Ondewo.Survey.Client.csproj` is **tracked**. On the next run the image finds it in the
   input volume and uses it instead of its own default, which is what lets this repository customise the package —
   so keep any edit you make to it restorable from the compiler image's pre-warmed offline NuGet feed, or the
   restore fails with `NU1101`.
@@ -218,7 +218,7 @@ Anything you put in the repository is copied into the image's internal compile d
 SDK's default `Compile` glob, so a hand-written `auth/Something.cs` ships inside the package with no barrel file
 to maintain — in C# the assembly *is* the barrel. `auth/OndewoAuth.cs` is the one example in the tree.
 
-The same glob is why `Ondewo.SURVEY.Client.csproj` carries
+The same glob is why `Ondewo.Survey.Client.csproj` carries
 
 ```xml
 <Compile Remove="tests/**" />

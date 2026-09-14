@@ -61,4 +61,4 @@ build_check.txt
 
 # Generated stubs - see the header above; only enable together with a CI job that generates them
 #api/
-#Ondewo.SURVEY.Client.csproj
+#Ondewo.Survey.Client.csproj

@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <!-- Test project for the committed stubs. It is never packaged and never referenced by the
-       library: Ondewo.SURVEY.Client.csproj removes tests/** from its Compile glob. -->
+       library: Ondewo.Survey.Client.csproj removes tests/** from its Compile glob. -->
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <IsPackable>false</IsPackable>
-    <AssemblyName>Ondewo.SURVEY.Client.Tests</AssemblyName>
+    <AssemblyName>Ondewo.Survey.Client.Tests</AssemblyName>
     <!-- Nested under the GENERATED namespace spelling (Ondewo.Survey), not under the package id
          (Ondewo.SURVEY): two namespaces differing only in case are a trap for case-insensitive
          consumers. -->
@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../../Ondewo.SURVEY.Client.csproj" />
+    <ProjectReference Include="../../Ondewo.Survey.Client.csproj" />
   </ItemGroup>
 
 </Project>
