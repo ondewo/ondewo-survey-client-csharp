@@ -5,17 +5,11 @@
 // Original file comments:
 // Copyright 2020 ONDEWO GmbH
 //
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
+// Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 //
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a>
 //
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License. (editesyntax = "proto3";
+// Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. (editesyntax = "proto3";
 #pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
@@ -177,7 +171,7 @@ namespace Ondewo.Survey {
     public abstract partial class SurveysBase
     {
       /// <summary>
-      /// Create a Survey and an empty NLU Agent for it
+      /// &lt;p>Create a Survey and an empty NLU Agent for it&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -189,7 +183,7 @@ namespace Ondewo.Survey {
       }
 
       /// <summary>
-      /// Retrieve a Survey message from the Database and return it
+      /// &lt;p>Retrieve a Survey message from the Database and return it&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -201,7 +195,7 @@ namespace Ondewo.Survey {
       }
 
       /// <summary>
-      /// Update an existing Survey message from the Database and return it
+      /// &lt;p>Update an existing Survey message from the Database and return it&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -213,7 +207,7 @@ namespace Ondewo.Survey {
       }
 
       /// <summary>
-      /// Delete a survey and its associated agent (if existent)
+      /// &lt;p>Delete a survey and its associated agent (if existent)&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -225,7 +219,7 @@ namespace Ondewo.Survey {
       }
 
       /// <summary>
-      /// Returns the list of all surveys in the server
+      /// &lt;p>Returns the list of all surveys in the server&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -237,7 +231,7 @@ namespace Ondewo.Survey {
       }
 
       /// <summary>
-      /// Retrieve answers to survey questions collected in interactions with a survey agent for a specific session
+      /// &lt;p>Retrieve answers to survey questions collected in interactions with a survey agent for a specific session&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -249,7 +243,7 @@ namespace Ondewo.Survey {
       }
 
       /// <summary>
-      /// Retrieve all answers to survey questions collected in interactions with a survey agent in any session
+      /// &lt;p>Retrieve all answers to survey questions collected in interactions with a survey agent in any session&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -261,7 +255,7 @@ namespace Ondewo.Survey {
       }
 
       /// <summary>
-      /// Populate and configures an NLU Agent from a Survey
+      /// &lt;p>Populate and configures an NLU Agent from a Survey&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -273,7 +267,7 @@ namespace Ondewo.Survey {
       }
 
       /// <summary>
-      /// Update an NLU agent from a survey
+      /// &lt;p>Update an NLU agent from a survey&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -285,7 +279,7 @@ namespace Ondewo.Survey {
       }
 
       /// <summary>
-      /// Deletes all data of an NLU agent associated to a survey
+      /// &lt;p>Deletes all data of an NLU agent associated to a survey&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -326,7 +320,7 @@ namespace Ondewo.Survey {
       }
 
       /// <summary>
-      /// Create a Survey and an empty NLU Agent for it
+      /// &lt;p>Create a Survey and an empty NLU Agent for it&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -339,7 +333,7 @@ namespace Ondewo.Survey {
         return CreateSurvey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Create a Survey and an empty NLU Agent for it
+      /// &lt;p>Create a Survey and an empty NLU Agent for it&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -350,7 +344,7 @@ namespace Ondewo.Survey {
         return CallInvoker.BlockingUnaryCall(__Method_CreateSurvey, null, options, request);
       }
       /// <summary>
-      /// Create a Survey and an empty NLU Agent for it
+      /// &lt;p>Create a Survey and an empty NLU Agent for it&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -363,7 +357,7 @@ namespace Ondewo.Survey {
         return CreateSurveyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Create a Survey and an empty NLU Agent for it
+      /// &lt;p>Create a Survey and an empty NLU Agent for it&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -374,7 +368,7 @@ namespace Ondewo.Survey {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSurvey, null, options, request);
       }
       /// <summary>
-      /// Retrieve a Survey message from the Database and return it
+      /// &lt;p>Retrieve a Survey message from the Database and return it&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -387,7 +381,7 @@ namespace Ondewo.Survey {
         return GetSurvey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieve a Survey message from the Database and return it
+      /// &lt;p>Retrieve a Survey message from the Database and return it&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -398,7 +392,7 @@ namespace Ondewo.Survey {
         return CallInvoker.BlockingUnaryCall(__Method_GetSurvey, null, options, request);
       }
       /// <summary>
-      /// Retrieve a Survey message from the Database and return it
+      /// &lt;p>Retrieve a Survey message from the Database and return it&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -411,7 +405,7 @@ namespace Ondewo.Survey {
         return GetSurveyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieve a Survey message from the Database and return it
+      /// &lt;p>Retrieve a Survey message from the Database and return it&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -422,7 +416,7 @@ namespace Ondewo.Survey {
         return CallInvoker.AsyncUnaryCall(__Method_GetSurvey, null, options, request);
       }
       /// <summary>
-      /// Update an existing Survey message from the Database and return it
+      /// &lt;p>Update an existing Survey message from the Database and return it&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -435,7 +429,7 @@ namespace Ondewo.Survey {
         return UpdateSurvey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Update an existing Survey message from the Database and return it
+      /// &lt;p>Update an existing Survey message from the Database and return it&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -446,7 +440,7 @@ namespace Ondewo.Survey {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSurvey, null, options, request);
       }
       /// <summary>
-      /// Update an existing Survey message from the Database and return it
+      /// &lt;p>Update an existing Survey message from the Database and return it&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -459,7 +453,7 @@ namespace Ondewo.Survey {
         return UpdateSurveyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Update an existing Survey message from the Database and return it
+      /// &lt;p>Update an existing Survey message from the Database and return it&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -470,7 +464,7 @@ namespace Ondewo.Survey {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSurvey, null, options, request);
       }
       /// <summary>
-      /// Delete a survey and its associated agent (if existent)
+      /// &lt;p>Delete a survey and its associated agent (if existent)&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -483,7 +477,7 @@ namespace Ondewo.Survey {
         return DeleteSurvey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Delete a survey and its associated agent (if existent)
+      /// &lt;p>Delete a survey and its associated agent (if existent)&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -494,7 +488,7 @@ namespace Ondewo.Survey {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSurvey, null, options, request);
       }
       /// <summary>
-      /// Delete a survey and its associated agent (if existent)
+      /// &lt;p>Delete a survey and its associated agent (if existent)&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -507,7 +501,7 @@ namespace Ondewo.Survey {
         return DeleteSurveyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Delete a survey and its associated agent (if existent)
+      /// &lt;p>Delete a survey and its associated agent (if existent)&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -518,7 +512,7 @@ namespace Ondewo.Survey {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSurvey, null, options, request);
       }
       /// <summary>
-      /// Returns the list of all surveys in the server
+      /// &lt;p>Returns the list of all surveys in the server&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -531,7 +525,7 @@ namespace Ondewo.Survey {
         return ListSurveys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of all surveys in the server
+      /// &lt;p>Returns the list of all surveys in the server&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -542,7 +536,7 @@ namespace Ondewo.Survey {
         return CallInvoker.BlockingUnaryCall(__Method_ListSurveys, null, options, request);
       }
       /// <summary>
-      /// Returns the list of all surveys in the server
+      /// &lt;p>Returns the list of all surveys in the server&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -555,7 +549,7 @@ namespace Ondewo.Survey {
         return ListSurveysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of all surveys in the server
+      /// &lt;p>Returns the list of all surveys in the server&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -566,7 +560,7 @@ namespace Ondewo.Survey {
         return CallInvoker.AsyncUnaryCall(__Method_ListSurveys, null, options, request);
       }
       /// <summary>
-      /// Retrieve answers to survey questions collected in interactions with a survey agent for a specific session
+      /// &lt;p>Retrieve answers to survey questions collected in interactions with a survey agent for a specific session&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -579,7 +573,7 @@ namespace Ondewo.Survey {
         return GetSurveyAnswers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieve answers to survey questions collected in interactions with a survey agent for a specific session
+      /// &lt;p>Retrieve answers to survey questions collected in interactions with a survey agent for a specific session&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -590,7 +584,7 @@ namespace Ondewo.Survey {
         return CallInvoker.BlockingUnaryCall(__Method_GetSurveyAnswers, null, options, request);
       }
       /// <summary>
-      /// Retrieve answers to survey questions collected in interactions with a survey agent for a specific session
+      /// &lt;p>Retrieve answers to survey questions collected in interactions with a survey agent for a specific session&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -603,7 +597,7 @@ namespace Ondewo.Survey {
         return GetSurveyAnswersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieve answers to survey questions collected in interactions with a survey agent for a specific session
+      /// &lt;p>Retrieve answers to survey questions collected in interactions with a survey agent for a specific session&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -614,7 +608,7 @@ namespace Ondewo.Survey {
         return CallInvoker.AsyncUnaryCall(__Method_GetSurveyAnswers, null, options, request);
       }
       /// <summary>
-      /// Retrieve all answers to survey questions collected in interactions with a survey agent in any session
+      /// &lt;p>Retrieve all answers to survey questions collected in interactions with a survey agent in any session&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -627,7 +621,7 @@ namespace Ondewo.Survey {
         return GetAllSurveyAnswers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieve all answers to survey questions collected in interactions with a survey agent in any session
+      /// &lt;p>Retrieve all answers to survey questions collected in interactions with a survey agent in any session&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -638,7 +632,7 @@ namespace Ondewo.Survey {
         return CallInvoker.BlockingUnaryCall(__Method_GetAllSurveyAnswers, null, options, request);
       }
       /// <summary>
-      /// Retrieve all answers to survey questions collected in interactions with a survey agent in any session
+      /// &lt;p>Retrieve all answers to survey questions collected in interactions with a survey agent in any session&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -651,7 +645,7 @@ namespace Ondewo.Survey {
         return GetAllSurveyAnswersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieve all answers to survey questions collected in interactions with a survey agent in any session
+      /// &lt;p>Retrieve all answers to survey questions collected in interactions with a survey agent in any session&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -662,7 +656,7 @@ namespace Ondewo.Survey {
         return CallInvoker.AsyncUnaryCall(__Method_GetAllSurveyAnswers, null, options, request);
       }
       /// <summary>
-      /// Populate and configures an NLU Agent from a Survey
+      /// &lt;p>Populate and configures an NLU Agent from a Survey&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -675,7 +669,7 @@ namespace Ondewo.Survey {
         return CreateAgentSurvey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Populate and configures an NLU Agent from a Survey
+      /// &lt;p>Populate and configures an NLU Agent from a Survey&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -686,7 +680,7 @@ namespace Ondewo.Survey {
         return CallInvoker.BlockingUnaryCall(__Method_CreateAgentSurvey, null, options, request);
       }
       /// <summary>
-      /// Populate and configures an NLU Agent from a Survey
+      /// &lt;p>Populate and configures an NLU Agent from a Survey&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -699,7 +693,7 @@ namespace Ondewo.Survey {
         return CreateAgentSurveyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Populate and configures an NLU Agent from a Survey
+      /// &lt;p>Populate and configures an NLU Agent from a Survey&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -710,7 +704,7 @@ namespace Ondewo.Survey {
         return CallInvoker.AsyncUnaryCall(__Method_CreateAgentSurvey, null, options, request);
       }
       /// <summary>
-      /// Update an NLU agent from a survey
+      /// &lt;p>Update an NLU agent from a survey&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -723,7 +717,7 @@ namespace Ondewo.Survey {
         return UpdateAgentSurvey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Update an NLU agent from a survey
+      /// &lt;p>Update an NLU agent from a survey&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -734,7 +728,7 @@ namespace Ondewo.Survey {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateAgentSurvey, null, options, request);
       }
       /// <summary>
-      /// Update an NLU agent from a survey
+      /// &lt;p>Update an NLU agent from a survey&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -747,7 +741,7 @@ namespace Ondewo.Survey {
         return UpdateAgentSurveyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Update an NLU agent from a survey
+      /// &lt;p>Update an NLU agent from a survey&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -758,7 +752,7 @@ namespace Ondewo.Survey {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateAgentSurvey, null, options, request);
       }
       /// <summary>
-      /// Deletes all data of an NLU agent associated to a survey
+      /// &lt;p>Deletes all data of an NLU agent associated to a survey&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -771,7 +765,7 @@ namespace Ondewo.Survey {
         return DeleteAgentSurvey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes all data of an NLU agent associated to a survey
+      /// &lt;p>Deletes all data of an NLU agent associated to a survey&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -782,7 +776,7 @@ namespace Ondewo.Survey {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteAgentSurvey, null, options, request);
       }
       /// <summary>
-      /// Deletes all data of an NLU agent associated to a survey
+      /// &lt;p>Deletes all data of an NLU agent associated to a survey&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -795,7 +789,7 @@ namespace Ondewo.Survey {
         return DeleteAgentSurveyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes all data of an NLU agent associated to a survey
+      /// &lt;p>Deletes all data of an NLU agent associated to a survey&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
