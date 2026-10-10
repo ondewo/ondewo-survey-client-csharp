@@ -53,6 +53,9 @@ namespace Ondewo.Survey {
 
   }
   #region Messages
+  /// <summary>
+  /// Request message for creating a survey from FHIR format
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateFHIRSurveyRequest : pb::IMessage<CreateFHIRSurveyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -263,6 +266,9 @@ namespace Ondewo.Survey {
 
   }
 
+  /// <summary>
+  /// Response message containing survey answers in FHIR format
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SurveyFHIRAnswersResponse : pb::IMessage<SurveyFHIRAnswersResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -314,7 +320,7 @@ namespace Ondewo.Survey {
     private string surveyId_ = "";
     /// <summary>
     /// The project identifier for this survey. Equal to the parent of the corresponding Agent.
-    /// Format: `projects/&lt;Project ID>/agent`.
+    /// Format: &lt;pre>&lt;code>projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

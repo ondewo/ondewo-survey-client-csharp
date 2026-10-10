@@ -5,17 +5,11 @@
 // Original file comments:
 // Copyright 2020 ONDEWO GmbH
 //
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
+// Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 //
-//     http://www.apache.org/licenses/LICENSE-2.0
+//     <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a>
 //
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License. (editesyntax = "proto3";
+// Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. (editesyntax = "proto3";
 #pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
@@ -105,7 +99,7 @@ namespace Ondewo.Survey {
     public abstract partial class FHIRBase
     {
       /// <summary>
-      /// Create a Survey from FHIR format and an empty NLU Agent for it
+      /// &lt;p>Create a Survey from FHIR format and an empty NLU Agent for it&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -117,7 +111,7 @@ namespace Ondewo.Survey {
       }
 
       /// <summary>
-      /// Get Survey Answers on FHIR format
+      /// &lt;p>Get Survey Answers on FHIR format&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -129,7 +123,7 @@ namespace Ondewo.Survey {
       }
 
       /// <summary>
-      /// Get all Survey Answers on FHIR format
+      /// &lt;p>Get all Survey Answers on FHIR format&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -170,7 +164,7 @@ namespace Ondewo.Survey {
       }
 
       /// <summary>
-      /// Create a Survey from FHIR format and an empty NLU Agent for it
+      /// &lt;p>Create a Survey from FHIR format and an empty NLU Agent for it&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -183,7 +177,7 @@ namespace Ondewo.Survey {
         return CreateFHIRSurvey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Create a Survey from FHIR format and an empty NLU Agent for it
+      /// &lt;p>Create a Survey from FHIR format and an empty NLU Agent for it&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -194,7 +188,7 @@ namespace Ondewo.Survey {
         return CallInvoker.BlockingUnaryCall(__Method_CreateFHIRSurvey, null, options, request);
       }
       /// <summary>
-      /// Create a Survey from FHIR format and an empty NLU Agent for it
+      /// &lt;p>Create a Survey from FHIR format and an empty NLU Agent for it&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -207,7 +201,7 @@ namespace Ondewo.Survey {
         return CreateFHIRSurveyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Create a Survey from FHIR format and an empty NLU Agent for it
+      /// &lt;p>Create a Survey from FHIR format and an empty NLU Agent for it&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -218,7 +212,7 @@ namespace Ondewo.Survey {
         return CallInvoker.AsyncUnaryCall(__Method_CreateFHIRSurvey, null, options, request);
       }
       /// <summary>
-      /// Get Survey Answers on FHIR format
+      /// &lt;p>Get Survey Answers on FHIR format&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -231,7 +225,7 @@ namespace Ondewo.Survey {
         return GetFHIRSurveyAnswers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get Survey Answers on FHIR format
+      /// &lt;p>Get Survey Answers on FHIR format&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -242,7 +236,7 @@ namespace Ondewo.Survey {
         return CallInvoker.BlockingUnaryCall(__Method_GetFHIRSurveyAnswers, null, options, request);
       }
       /// <summary>
-      /// Get Survey Answers on FHIR format
+      /// &lt;p>Get Survey Answers on FHIR format&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -255,7 +249,7 @@ namespace Ondewo.Survey {
         return GetFHIRSurveyAnswersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get Survey Answers on FHIR format
+      /// &lt;p>Get Survey Answers on FHIR format&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -266,7 +260,7 @@ namespace Ondewo.Survey {
         return CallInvoker.AsyncUnaryCall(__Method_GetFHIRSurveyAnswers, null, options, request);
       }
       /// <summary>
-      /// Get all Survey Answers on FHIR format
+      /// &lt;p>Get all Survey Answers on FHIR format&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -279,7 +273,7 @@ namespace Ondewo.Survey {
         return GetAllFHIRSurveyAnswers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get all Survey Answers on FHIR format
+      /// &lt;p>Get all Survey Answers on FHIR format&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -290,7 +284,7 @@ namespace Ondewo.Survey {
         return CallInvoker.BlockingUnaryCall(__Method_GetAllFHIRSurveyAnswers, null, options, request);
       }
       /// <summary>
-      /// Get all Survey Answers on FHIR format
+      /// &lt;p>Get all Survey Answers on FHIR format&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -303,7 +297,7 @@ namespace Ondewo.Survey {
         return GetAllFHIRSurveyAnswersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Get all Survey Answers on FHIR format
+      /// &lt;p>Get all Survey Answers on FHIR format&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

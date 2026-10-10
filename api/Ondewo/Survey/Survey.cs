@@ -152,12 +152,13 @@ namespace Ondewo.Survey {
   }
   #region Enums
   /// <summary>
-  /// Enumeration of (some of) the subflows which are created by default
-  /// This can be used to "switch off" particular subflows when creating an agent during CreateSurvey
-  /// Subflows are defined as one of the following:
-  /// - sequences of intents A -> B_1, ..., B_n -> ... -> Z_1, ..., Z_m which are linked by context relationships
-  ///      such that the first intent in the sequence can always be triggered
-  /// - single intents which can always be triggered
+  /// &lt;p>Enumeration of (some of) the subflows which are created by default&lt;/p>
+  /// &lt;p>This can be used to &amp;quot;switch off&amp;quot; particular subflows when creating an agent during CreateSurvey&lt;/p>
+  /// &lt;p>Subflows are defined as one of the following:&lt;/p>
+  /// &lt;ul>
+  ///   &lt;li>sequences of intents A -&amp;gt; B_1, ..., B_n -&amp;gt; ... -&amp;gt; Z_1, ..., Z_m which are linked by context relationships such that the first intent in the sequence can always be triggered&lt;/li>
+  ///   &lt;li>single intents which can always be triggered&lt;/li>
+  /// &lt;/ul>
   /// </summary>
   public enum SubFlow {
     /// <summary>
@@ -201,6 +202,9 @@ namespace Ondewo.Survey {
   #endregion
 
   #region Messages
+  /// <summary>
+  /// A survey containing questions and metadata for conducting user surveys
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Survey : pb::IMessage<Survey>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -257,7 +261,7 @@ namespace Ondewo.Survey {
     private string surveyId_ = "";
     /// <summary>
     /// The project identifier for this survey. Equal to the parent of the corresponding Agent.
-    /// Format: `projects/&lt;Project ID>/agent`.
+    /// Format: &lt;pre>&lt;code>projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code>&lt;/pre>
     /// Read-only in the Survey message (assigned by the back-end)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -290,6 +294,7 @@ namespace Ondewo.Survey {
     /// <summary>
     /// Required. The language of the agent created for the survey.
     /// This is also the only supported language of the agent.
+    /// ISO 639-1 language code
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -638,9 +643,21 @@ namespace Ondewo.Survey {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       public enum AgentStatus {
+        /// <summary>
+        /// Agent has not been initialized yet
+        /// </summary>
         [pbr::OriginalName("TO_BE_INITIALIZED")] ToBeInitialized = 0,
+        /// <summary>
+        /// Agent has been successfully updated and is current
+        /// </summary>
         [pbr::OriginalName("UPDATED")] Updated = 1,
+        /// <summary>
+        /// Agent is currently being updated
+        /// </summary>
         [pbr::OriginalName("UPDATING")] Updating = 2,
+        /// <summary>
+        /// Agent is outdated and needs to be updated
+        /// </summary>
         [pbr::OriginalName("OUTDATED")] Outdated = 3,
       }
 
@@ -650,8 +667,8 @@ namespace Ondewo.Survey {
   }
 
   /// <summary>
-  /// Collect information about the entity behind the survey, the purpose of the survey, legal stuff, etc.
-  /// This is needed to generate meaningful messages and training data for some of the auto-generated intents.
+  /// &lt;p>Collect information about the entity behind the survey, the purpose of the survey, legal stuff, etc.&lt;/p>
+  /// &lt;p>This is needed to generate meaningful messages and training data for some of the auto-generated intents.&lt;/p>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SurveyInfo : pb::IMessage<SurveyInfo>
@@ -841,10 +858,9 @@ namespace Ondewo.Survey {
     /// <summary>
     /// Required.
     /// A pronounceable explanation of the legal implications of participating in the survey.
-    /// For example:
-    ///  "Your answers during this survey will be stored anonymously for the next two years and then deleted."
+    /// For example: &amp;quot;Your answers during this survey will be stored anonymously for the next two years and then deleted.&amp;quot;
     /// Should be formulated such that the agent can afterwards ask for the consent of the user.
-    /// Example for how the agent could continue: "Are you willing to participate in this survey?"
+    /// Example for how the agent could continue: &amp;quot;Are you willing to participate in this survey?&amp;quot;
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1229,6 +1245,9 @@ namespace Ondewo.Survey {
 
   }
 
+  /// <summary>
+  /// A question that can be one of several question types: open-ended, single choice, multiple choice, scale, or parameter-based questions
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Question : pb::IMessage<Question>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1296,6 +1315,9 @@ namespace Ondewo.Survey {
 
     /// <summary>Field number for the "open_question" field.</summary>
     public const int OpenQuestionFieldNumber = 1;
+    /// <summary>
+    /// A question to which any kind of reply can be given and recorded
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ondewo.Survey.OpenQuestion OpenQuestion {
@@ -1308,6 +1330,9 @@ namespace Ondewo.Survey {
 
     /// <summary>Field number for the "single_choice_question" field.</summary>
     public const int SingleChoiceQuestionFieldNumber = 2;
+    /// <summary>
+    /// A question for which exactly one out of a predefined set of options is expected as answer
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ondewo.Survey.SingleChoiceQuestion SingleChoiceQuestion {
@@ -1320,6 +1345,9 @@ namespace Ondewo.Survey {
 
     /// <summary>Field number for the "multiple_choice_question" field.</summary>
     public const int MultipleChoiceQuestionFieldNumber = 3;
+    /// <summary>
+    /// A question for which exactly one or more out of a predefined set of options are expected as answers
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ondewo.Survey.MultipleChoiceQuestion MultipleChoiceQuestion {
@@ -1347,6 +1375,9 @@ namespace Ondewo.Survey {
 
     /// <summary>Field number for the "single_parameter_question" field.</summary>
     public const int SingleParameterQuestionFieldNumber = 5;
+    /// <summary>
+    /// A question for which one or more entities of a particular type are expected as answers
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ondewo.Survey.SingleParameterQuestion SingleParameterQuestion {
@@ -1359,6 +1390,9 @@ namespace Ondewo.Survey {
 
     /// <summary>Field number for the "multiple_parameter_question" field.</summary>
     public const int MultipleParameterQuestionFieldNumber = 6;
+    /// <summary>
+    /// A question for which one or more entities of a particular type are expected as answers
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ondewo.Survey.MultipleParameterQuestion MultipleParameterQuestion {
@@ -1739,8 +1773,8 @@ namespace Ondewo.Survey {
   }
 
   /// <summary>
-  /// A question to which any kind of reply can be given and recorded
-  /// fixme: not working yet
+  /// &lt;p>A question to which any kind of reply can be given and recorded&lt;/p>
+  /// &lt;p>fixme: not working yet&lt;/p>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OpenQuestion : pb::IMessage<OpenQuestion>
@@ -1944,15 +1978,8 @@ namespace Ondewo.Survey {
   }
 
   /// <summary>
-  /// A question for which exactly one out of a predefined set of options is expected as answer
-  /// Example: SingleChoiceQuestion(
-  ///      question_text='Who is your favorite movie hero?',
-  ///      choices=[
-  ///          Choice(synonyms=['Bond', 'James Bond']),
-  ///          Choice(synonyms=['Batman']),
-  ///          Choice(synonyms=['Superman', 'Clark Kent']),
-  ///          ]
-  ///      )
+  /// &lt;p>A question for which exactly one out of a predefined set of options is expected as answer&lt;/p>
+  /// &lt;p>Example: &lt;code>SingleChoiceQuestion(question_text=&amp;apos;Who is your favorite movie hero?&amp;apos;, choices=[Choice(synonyms=[&amp;apos;Bond&amp;apos;, &amp;apos;James Bond&amp;apos;]), Choice(synonyms=[&amp;apos;Batman&amp;apos;]), Choice(synonyms=[&amp;apos;Superman&amp;apos;, &amp;apos;Clark Kent&amp;apos;])])&lt;/code>&lt;/p>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SingleChoiceQuestion : pb::IMessage<SingleChoiceQuestion>
@@ -2187,15 +2214,8 @@ namespace Ondewo.Survey {
   }
 
   /// <summary>
-  /// A question for which exactly one or more out of a predefined set of options are expected as answers
-  /// Example: MultipleChoiceQuestion(
-  ///      question_text='Which colors do you like?',
-  ///      choices=[
-  ///          Choice(synonyms=['red', 'reddisch']),
-  ///          Choice(synonyms=['blue', 'blueish']),
-  ///          Choice(synonyms=['yellow']),
-  ///          ]
-  ///       )
+  /// &lt;p>A question for which exactly one or more out of a predefined set of options are expected as answers&lt;/p>
+  /// &lt;p>Example: &lt;code>MultipleChoiceQuestion(question_text=&amp;apos;Which colors do you like?&amp;apos;, choices=[Choice(synonyms=[&amp;apos;red&amp;apos;, &amp;apos;reddisch&amp;apos;]), Choice(synonyms=[&amp;apos;blue&amp;apos;, &amp;apos;blueish&amp;apos;]), Choice(synonyms=[&amp;apos;yellow&amp;apos;])])&lt;/code>&lt;/p>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MultipleChoiceQuestion : pb::IMessage<MultipleChoiceQuestion>
@@ -2497,6 +2517,9 @@ namespace Ondewo.Survey {
     /// <summary>Field number for the "min_value" field.</summary>
     public const int MinValueFieldNumber = 2;
     private global::Ondewo.Survey.ScaleQuestion.Types.ScaleValue minValue_;
+    /// <summary>
+    /// Minimum value and label for the scale
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ondewo.Survey.ScaleQuestion.Types.ScaleValue MinValue {
@@ -2509,6 +2532,9 @@ namespace Ondewo.Survey {
     /// <summary>Field number for the "max_value" field.</summary>
     public const int MaxValueFieldNumber = 3;
     private global::Ondewo.Survey.ScaleQuestion.Types.ScaleValue maxValue_;
+    /// <summary>
+    /// Maximum value and label for the scale
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ondewo.Survey.ScaleQuestion.Types.ScaleValue MaxValue {
@@ -2728,6 +2754,9 @@ namespace Ondewo.Survey {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Represents a value and label pair for scale question endpoints
+      /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ScaleValue : pb::IMessage<ScaleValue>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2777,6 +2806,9 @@ namespace Ondewo.Survey {
         /// <summary>Field number for the "value" field.</summary>
         public const int ValueFieldNumber = 1;
         private int value_;
+        /// <summary>
+        /// Numeric value for this scale point
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int Value {
@@ -2789,6 +2821,9 @@ namespace Ondewo.Survey {
         /// <summary>Field number for the "label" field.</summary>
         public const int LabelFieldNumber = 2;
         private string label_ = "";
+        /// <summary>
+        /// Human-readable label for this scale point
+        /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Label {
@@ -2969,8 +3004,8 @@ namespace Ondewo.Survey {
   }
 
   /// <summary>
-  /// SingleParameterQuestion defines a question which prompts the user for one entity of a particular type
-  /// Example: SingleParameterQuestion(question_text='How old are you?', parameter_type='sys.number')
+  /// &lt;p>SingleParameterQuestion defines a question which prompts the user for one entity of a particular type&lt;/p>
+  /// &lt;p>Example: &lt;code>SingleParameterQuestion(question_text=&amp;apos;How old are you?&amp;apos;, parameter_type=&amp;apos;sys.number&amp;apos;)&lt;/code>&lt;/p>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SingleParameterQuestion : pb::IMessage<SingleParameterQuestion>
@@ -3215,8 +3250,8 @@ namespace Ondewo.Survey {
   }
 
   /// <summary>
-  /// MultipleParameterQuestion defines a question which prompts the user for one or several entities of one particular type
-  /// Example: MultipleParameterQuestion(question_text='How old are your children?', parameter_type='sys.number')
+  /// &lt;p>MultipleParameterQuestion defines a question which prompts the user for one or several entities of one particular type&lt;/p>
+  /// &lt;p>Example: &lt;code>MultipleParameterQuestion(question_text=&amp;apos;How old are your children?&amp;apos;, parameter_type=&amp;apos;sys.number&amp;apos;)&lt;/code>&lt;/p>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MultipleParameterQuestion : pb::IMessage<MultipleParameterQuestion>
@@ -3461,8 +3496,8 @@ namespace Ondewo.Survey {
   }
 
   /// <summary>
-  /// The Choice message defines one "option" for the SingleChoiceQuestion and MultipleChoiceQuestion question types
-  /// Example: Choice(synonyms=["blue", "blueish", "pale blue", "deep blue"])
+  /// &lt;p>The Choice message defines one &amp;quot;option&amp;quot; for the SingleChoiceQuestion and MultipleChoiceQuestion question types&lt;/p>
+  /// &lt;p>Example: &lt;code>Choice(synonyms=[&amp;quot;blue&amp;quot;, &amp;quot;blueish&amp;quot;, &amp;quot;pale blue&amp;quot;, &amp;quot;deep blue&amp;quot;])&lt;/code>&lt;/p>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Choice : pb::IMessage<Choice>
@@ -3545,7 +3580,7 @@ namespace Ondewo.Survey {
     public const int ValueFieldNumber = 3;
     private string value_ = "";
     /// <summary>
-    /// The "canonical value" (i.e. the entity value)
+    /// The &amp;quot;canonical value&amp;quot; (i.e. the entity value)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3744,6 +3779,9 @@ namespace Ondewo.Survey {
 
   }
 
+  /// <summary>
+  /// An answer to a survey question collected during a session
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Answer : pb::IMessage<Answer>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3880,6 +3918,9 @@ namespace Ondewo.Survey {
 
     /// <summary>Field number for the "anonymous" field.</summary>
     public const int AnonymousFieldNumber = 7;
+    /// <summary>
+    /// True if the survey is anonymous, false otherwise
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Anonymous {
@@ -3906,6 +3947,9 @@ namespace Ondewo.Survey {
 
     /// <summary>Field number for the "user_information" field.</summary>
     public const int UserInformationFieldNumber = 6;
+    /// <summary>
+    /// User information if the survey is not anonymous
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ondewo.Survey.Answer.Types.UserInfo UserInformation {
@@ -4243,6 +4287,9 @@ namespace Ondewo.Survey {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// User information for non-anonymous surveys
+      /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class UserInfo : pb::IMessage<UserInfo>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4609,6 +4656,9 @@ namespace Ondewo.Survey {
 
   }
 
+  /// <summary>
+  /// Request message for creating a new survey
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateSurveyRequest : pb::IMessage<CreateSurveyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4657,6 +4707,9 @@ namespace Ondewo.Survey {
     /// <summary>Field number for the "survey" field.</summary>
     public const int SurveyFieldNumber = 1;
     private global::Ondewo.Survey.Survey survey_;
+    /// <summary>
+    /// The survey to create
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ondewo.Survey.Survey Survey {
@@ -4816,6 +4869,9 @@ namespace Ondewo.Survey {
 
   }
 
+  /// <summary>
+  /// Request message for retrieving a survey
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSurveyRequest : pb::IMessage<GetSurveyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4866,7 +4922,7 @@ namespace Ondewo.Survey {
     private string surveyId_ = "";
     /// <summary>
     /// The project identifier for this survey. Equal to the parent of the corresponding Agent.
-    /// Format: `projects/&lt;Project ID>/agent`.
+    /// Format: &lt;pre>&lt;code>projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5018,6 +5074,9 @@ namespace Ondewo.Survey {
 
   }
 
+  /// <summary>
+  /// Request message for updating an existing survey
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateSurveyRequest : pb::IMessage<UpdateSurveyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5084,8 +5143,7 @@ namespace Ondewo.Survey {
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
     /// Optional. Field mask that defines which fields get updated. Default: all fields are updated.
-    /// Example:
-    ///          - update_mask = FieldMask( [ 'survey.display_name', 'survey.questions' ] )
+    /// Example: &lt;code>update_mask = FieldMask([&amp;apos;survey.display_name&amp;apos;, &amp;apos;survey.questions&amp;apos;])&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5279,6 +5337,9 @@ namespace Ondewo.Survey {
 
   }
 
+  /// <summary>
+  /// Request message for deleting a survey
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteSurveyRequest : pb::IMessage<DeleteSurveyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5329,7 +5390,7 @@ namespace Ondewo.Survey {
     private string surveyId_ = "";
     /// <summary>
     /// The project identifier for this survey. Equal to the parent of the corresponding Agent.
-    /// Format: `projects/&lt;Project ID>/agent`.
+    /// Format: &lt;pre>&lt;code>projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5481,6 +5542,9 @@ namespace Ondewo.Survey {
 
   }
 
+  /// <summary>
+  /// Request message for retrieving survey answers for a specific session or user
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSurveyAnswersRequest : pb::IMessage<GetSurveyAnswersRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5541,6 +5605,10 @@ namespace Ondewo.Survey {
     /// <summary>Field number for the "survey_id" field.</summary>
     public const int SurveyIdFieldNumber = 1;
     private string surveyId_ = "";
+    /// <summary>
+    /// The project identifier for this survey. Equal to the parent of the corresponding Agent.
+    /// Format: &lt;pre>&lt;code>projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code>&lt;/pre>
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SurveyId {
@@ -5877,6 +5945,9 @@ namespace Ondewo.Survey {
 
   }
 
+  /// <summary>
+  /// Request message for retrieving all survey answers
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAllSurveyAnswersRequest : pb::IMessage<GetAllSurveyAnswersRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5927,7 +5998,7 @@ namespace Ondewo.Survey {
     private string surveyId_ = "";
     /// <summary>
     /// The project identifier for this survey. Equal to the parent of the corresponding Agent.
-    /// Format: `projects/&lt;Project ID>/agent`.
+    /// Format: &lt;pre>&lt;code>projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6079,6 +6150,9 @@ namespace Ondewo.Survey {
 
   }
 
+  /// <summary>
+  /// Response message containing survey answers
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SurveyAnswersResponse : pb::IMessage<SurveyAnswersResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6130,7 +6204,7 @@ namespace Ondewo.Survey {
     private string surveyId_ = "";
     /// <summary>
     /// The project identifier for this survey. Equal to the parent of the corresponding Agent.
-    /// Format: `projects/&lt;Project ID>/agent`.
+    /// Format: &lt;pre>&lt;code>projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6310,6 +6384,9 @@ namespace Ondewo.Survey {
 
   }
 
+  /// <summary>
+  /// Request message for listing surveys with pagination support
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSurveysRequest : pb::IMessage<ListSurveysRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6361,9 +6438,9 @@ namespace Ondewo.Survey {
     /// <summary>
     /// Optional. The next_page_token value returned from a previous list request.
     /// Example:
-    ///      "current_index-10--page_size-20"
-    ///      Start page -> 10
-    ///      Page size -> 20
+    /// &lt;ul>
+    ///   &lt;li>&amp;quot;current_index-10--page_size-20&amp;quot; - Start page -&amp;gt; 10, Page size -&amp;gt; 20&lt;/li>
+    /// &lt;/ul>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6516,7 +6593,7 @@ namespace Ondewo.Survey {
   }
 
   /// <summary>
-  /// The response message for [Intents.ListIntents][google.cloud.dialogflow.v2.Intents.ListIntents].
+  /// &lt;p>The response message for &lt;a href="index.html#google.cloud.dialogflow.v2.Intents.ListIntents">Intents.ListIntents&lt;/a>.&lt;/p>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSurveysResponse : pb::IMessage<ListSurveysResponse>
@@ -6570,8 +6647,7 @@ namespace Ondewo.Survey {
         = pb::FieldCodec.ForMessage(10, global::Ondewo.Survey.Survey.Parser);
     private readonly pbc::RepeatedField<global::Ondewo.Survey.Survey> surveys_ = new pbc::RepeatedField<global::Ondewo.Survey.Survey>();
     /// <summary>
-    /// The list of surveys. There will be a maximum number of items
-    /// returned based on the page_token field in the request.
+    /// The list of surveys. There will be a maximum number of items returned based on the page_token field in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6583,8 +6659,7 @@ namespace Ondewo.Survey {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Token to retrieve the next page of results, or empty if there are no
-    /// more results in the list.
+    /// Token to retrieve the next page of results, or empty if there are no more results in the list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6750,6 +6825,9 @@ namespace Ondewo.Survey {
 
   }
 
+  /// <summary>
+  /// Request message for agent-related survey operations
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AgentSurveyRequest : pb::IMessage<AgentSurveyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6800,7 +6878,7 @@ namespace Ondewo.Survey {
     private string surveyId_ = "";
     /// <summary>
     /// The project identifier for this survey. Equal to the parent of the corresponding Agent.
-    /// Format: `projects/&lt;Project ID>/agent`.
+    /// Format: &lt;pre>&lt;code>projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6952,6 +7030,9 @@ namespace Ondewo.Survey {
 
   }
 
+  /// <summary>
+  /// Response message for agent-related survey operations
+  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AgentSurveyResponse : pb::IMessage<AgentSurveyResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7002,7 +7083,7 @@ namespace Ondewo.Survey {
     private string parent_ = "";
     /// <summary>
     /// The parent of an agent. Equal to the survey ID.
-    /// Format: `projects/&lt;Project ID>/agent`.
+    /// Format: &lt;pre>&lt;code>projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
