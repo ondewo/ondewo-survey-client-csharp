@@ -41,12 +41,12 @@ export
 
 # MUST BE THE SAME AS THE API in Major and Minor Version Number
 # example: API 1.2.0 --> Client 1.2.X
-ONDEWO_SURVEY_VERSION=2.0.1
+ONDEWO_SURVEY_VERSION=2.1.0
 
 # Submodule pins. Both are checked out by `make checkout_defined_submodule_versions`, so the
 # generated code is always reproducible from this file alone.
-ONDEWO_SURVEY_API_GIT_BRANCH=tags/2.0.1
-ONDEWO_PROTO_COMPILER_GIT_BRANCH=tags/5.16.0
+ONDEWO_SURVEY_API_GIT_BRANCH=tags/2.1.0
+ONDEWO_PROTO_COMPILER_GIT_BRANCH=tags/5.17.0
 
 # You need to set up an access token at https://github.com/settings/tokens - permissions are important
 GITHUB_GH_TOKEN?=ENTER_YOUR_TOKEN_HERE

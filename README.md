@@ -51,21 +51,21 @@ That resolves the latest stable version. To pin one — which is what you want i
 the client version tracks the ONDEWO SURVEY API in major and minor:
 
 ```shell
-dotnet add package Ondewo.Survey.Client --version 2.0.1
+dotnet add package Ondewo.Survey.Client --version 2.1.0
 ```
 
 Or write the `PackageReference` item into your `.csproj` directly:
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="Ondewo.Survey.Client" Version="2.0.1" />
+  <PackageReference Include="Ondewo.Survey.Client" Version="2.1.0" />
 </ItemGroup>
 ```
 
 In the Visual Studio Package Manager Console:
 
 ```powershell
-Install-Package Ondewo.Survey.Client -Version 2.0.1
+Install-Package Ondewo.Survey.Client -Version 2.1.0
 ```
 
 A few things worth knowing before you take the dependency:
@@ -86,7 +86,7 @@ A few things worth knowing before you take the dependency:
 - **Debugging.** Every release also publishes a `.snupkg` symbol package to the nuget.org symbol
   server, so stepping into the generated stubs works once `https://symbols.nuget.org/download/symbols`
   is enabled in your debugger's symbol settings.
-- **Versioning.** `Ondewo.Survey.Client` **2.0.x** is generated from ONDEWO SURVEY API **2.0.1**: major
+- **Versioning.** `Ondewo.Survey.Client` **2.1.x** is generated from ONDEWO SURVEY API **2.1.0**: major
   and minor always match the API, the patch number is this client's own.
 
 From source:
